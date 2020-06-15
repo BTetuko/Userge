@@ -806,7 +806,7 @@ class Worker(_GDrive):
         if isinstance(self._output, HttpError):
             out = f"**ERROR** : `{self._output._get_reason()}`"
         elif self._output is not None and not self._is_canceled:
-            out = f"**Uploaded Successfully** __in {m_s} seconds__\n\n{self._output}"
+            out = f"**Uploaded Successfully** __in {m_s} seconds__\n\n{self._output}\n\n📂 Gdrive Index: <a href='{Config.INDEX_LINK}'>Click Here</a>"
         elif self._output is not None and self._is_canceled:
             out = self._output
         else:
